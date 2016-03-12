@@ -1,0 +1,40 @@
+telnet karate.ru 80
+
+
+HEAD / HTTP/1.0
+
+HEAD / HTTP/1.1
+HOST: karate.ru
+connection: close
+
+GET /news/ HTTP/1.1
+HOST: karate.ru
+
+POST /authentication/ HTTP/1.1
+HOST: karate.ru
+Content-Length:7
+Content-Type:application/octet-stream
+
+a=1&b=2
+
+;;Отправка формы
+POST /load_news/ HTTP/1.1
+HOST: karate.ru
+Content-Length:7
+Content-Type:application/x-www-form-urlencoded 
+
+email=1&password=2
+
+
+Transfer-Encoding:chunked
+
+;; query-string
+POST /?key=value 
+Content-Type: application/octet-stream
+
+
+;; Cookie
+Cookie: key=value; key2=value2
+
+
+

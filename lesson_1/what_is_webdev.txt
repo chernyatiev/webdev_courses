@@ -1,0 +1,14 @@
+Frontend:
+   html
+   css
+   javascript (CoffeScript, ClojureScript)
+
+
+Backend:
+   Web-Server(Nginx, LightHttp)
+   Application(Python, PHP, JavaScript, Ruby)
+   DataBase(MySQL, Postgre, Oracle, MongoDB,...)
+   Cache (Redis,Memcached)
+
+
+   
