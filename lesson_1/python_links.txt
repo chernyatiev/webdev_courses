@@ -1,0 +1,13 @@
+Изучить синтаксис языка Python (желательно начать с версии 2 и потом можно будет перейти на версию 3) с помощью одного или нескольких ресурсов:
+https://www.codecademy.com/learn/python
+https://ru.hexlet.io/courses/python_101
+https://www.coursera.org/course/interactivepython1
+https://realpython.com/ (курс платный, 60$)
+http://python-rutour.rhcloud.com/ 
+Книжки: 
+Марк Лутц “Изучаем Python”
+Byte of Python:  http://www.swaroopch.com/notes/python/
+http://pythonworld.ru/samouchitel-python
+http://learnpythonthehardway.org/
+Статьи на  habr.ru
+
