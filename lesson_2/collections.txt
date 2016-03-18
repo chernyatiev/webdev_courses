@@ -1,0 +1,60 @@
+;;Lists
+
+value = [1, 2, 5]
+value[0]                     1
+value[10]                    IndexError
+value[2] = 3                 [1, 2, 3]
+value.append(42)             [1, 2, 3, 42]
+value.extend([4, 5, 6])      [1, 2, 3, 42, 4, 5, 6]
+value.insert(0, 20)          [20, 1, 2, ...]
+value.sort()                 [1, 2, 3, 4, 5, 6, 20, 42]
+value.pop()                  42
+["foo", "bar"] + value
+
+;; Tuples
+
+value = (1, 2, 3)
+value[1]                           2
+("foo", "bar", True) + value       ("foo", "bar", True, 1, 2, 3)
+value[1] = 2                       Exception
+
+
+;; Dictionary
+
+mydict = {"key1": 1, "key2": 2}
+mydict["key1"]                         1
+mydict["foo"]                          KeyError
+mydict.get("foo")                      None
+mydict["key3"] = 2                     {... "key3": 3}
+mydict.update({"key3: 33"})            {... "key3": 33}
+mydict.keys()                          ["key1", "key2, ..."]
+mydict.values()                        [1, 2, 33]
+mydict.items()                         [("key1", 1), ("key2", 2),...]
+mydict.pop("key1")                     1
+
+
+;;Sets
+
+myset = {1, 2, 3}             {1, 2, 3}
+{1, 1, 2, 2, 3, 3}            {1, 2, 3}
+myset.add(4)                  {1, 2, 3, 4}
+myset & {3, 4, 5}             {3, 4}
+myset | {3, 4, 5}             {1, 2, 3, 4, 5}
+myset - {4, 3, 2}             {1}
+
+
+;; In
+
+2 in [1, 2, 3]                      True
+2 in (1, 2, 3)                      True
+"foo" in {"key1": 1, "key2": 2}     False
+True in {True, None, 42}            True
+
+
+Unpacking Lists and Tuples
+
+a, b = [1, 2]
+foo, bar, _, _, baz = (10, 20, None, None, 30)
+a, b = b, a + b
+a, b = (1, 2, 3)
+

@@ -1,0 +1,46 @@
+;;Функции в Python
+
+def name (arg1, arg2, ..., argN,kwarg1,.., kwargM, *args, **kwargs):
+    """
+    Description
+    dsfsdf
+    sdfsdf
+    """
+
+    operator1
+    operator2
+    ...
+    return value
+
+
+;; Соглашения по именованию:
+-  lower_underscore_case
+
+
+Плохо:
+myFunction() 
+My_func() 
+1_function()
+
+Хорошо: 
+get_first_element()
+
+Для приватных функций используется подчеркивание в начале:
+_my_private_function()
+
+
+;;Осторожнее с изменяемыми аргументами со значением по умолчанию!
+
+ def test(a=[]):
+    a.append(1)
+    print a
+
+
+;;Лямбды
+
+double = lambda x: 2* x
+
+avg = lambda *args: sum(args)/float(len(args))
+
+
+
