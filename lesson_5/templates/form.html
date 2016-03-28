@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+         <form action="{{ url_for('create_post' )}}" method="post">
+            <p><input type=text name="title"></p>
+            <p><textarea rows="10" cols="45" name="body"></textarea> 
+            <p><input type=submit value='Create!'>
+        </form>
+{% endblock %}
+
