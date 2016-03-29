@@ -1,7 +1,7 @@
 from flask import request, render_template, session, redirect, url_for
 from myapp import app
-from forms import  LoginForm
-from models import User
+from forms import  LoginForm, PostForm
+from models import User, Post, db
 from werkzeug import check_password_hash, generate_password_hash
 import flask.ext.login as flask_login
 
@@ -25,11 +25,28 @@ def index():
     return 'Hello World!'
 
 
-
+@flask_login.login_required
 @app.route('/home')
 def home():
     user = flask_login.current_user
     return 'hello ' + user.email
+
+@flask_login.login_required
+@app.route('/create_post', methods=['GET', 'POST'])
+def create_post():
+    form = PostForm(request.form)
+    if form.validate_on_submit():
+        post = Post(title=form.title.data, body = form.body.data, author = flask_login.current_user)
+        db.session.add(post)
+        db.session.commit()
+        return redirect(url_for('posts'))
+    return render_template("create_post.html", form = form)
+
+
+@app.route('/posts')
+def posts():
+    posts = Post.query.all()
+    return render_template("posts.html", posts=posts) 
 
 
 @app.route('/login', methods=['GET', 'POST'])

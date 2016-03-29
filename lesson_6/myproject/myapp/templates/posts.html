@@ -4,7 +4,7 @@
 {% for post in posts %}
 
 
-<p> <a href='{{ url_for('post', post_id=post.id) }}'>{{ post.title  }}</a> </p>
+<p> {{ post.title  }}  by {{ post.author }}</p>
 
 
 {% endfor %}
