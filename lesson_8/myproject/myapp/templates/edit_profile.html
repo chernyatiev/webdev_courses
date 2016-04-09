@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<h1>Edit profile</h1>
+<form action="" method="post" name="edit">
+    {{form.hidden_tag()}}
+    <p>
+        {{form.email(size=80, value = user.email)}}<br/>
+        {{form.username(size=80, value = user.username)}}<br/>
+        {{form.address(size=80, value = user.address)}}<br/>
+    </p>
+    <p><input type="submit" value="Save!"></p>
+</form>
+
+
+{% endblock %}
+

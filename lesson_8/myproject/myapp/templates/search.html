@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+{% if query %}
+
+<p>Your query: {{ query }}</p>
+
+<p>Results: {{ results }} </p> 
+
+{% endif %}
+
+        <form action="{{ url_for('search')}}" method="get">
+            <p><input type=text name="q"></p>
+            <p><input type=submit value='Search!'>
+        </form>
+
+{% endblock %}
+~                 

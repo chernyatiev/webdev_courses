@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<h1>Sign In</h1>
+<form action="" method="post" name="create_post">
+    {{form.hidden_tag()}}
+    <p>
+        Create new post:<br>
+        {{form.title(size=80)}}<br>
+        {{ form.body(cols = 80, rows = 10) }}<br>
+    </p>
+    <p><input type="submit" value="Create!"></p>
+</form>
+
+
+{% endblock %}
+

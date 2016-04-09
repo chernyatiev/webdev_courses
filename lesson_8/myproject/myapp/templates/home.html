@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div>Hello, {{ user.username }} </div>
+<p>Your email: {{ user.email }}</p>
+<p>Your address: {{ user.address }}
+
+<a href={{ url_for('edit_profile', user_id=user.id)}}>Edit</a>
+
+{% endblock %}
+
