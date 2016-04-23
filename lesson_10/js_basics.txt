@@ -1,0 +1,32 @@
+1. Современный стандарт JavaScript: ECMAScript 5
+   Следующий шаг - ECMAScript 6
+
+
+2. Как устроена интеграция в страницу
+
+<div>
+<h1>Какой-то заголовок</h1>
+</div>
+<script> 
+alert('Hello, world!');
+</script>
+
+или
+
+<script src='/path/to/test.js'>
+
+3.
+
+<HTML> = document.documentElement
+<BODY> = document.body
+3.
+
+<HTML> = document.documentElement
+<BODY> = document.body
+3.
+
+<HTML> = document.documentElement
+<BODY> = document.body
+
+
+

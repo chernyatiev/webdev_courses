@@ -1,0 +1,15 @@
+/myapp
+    /run.py
+    /config.py
+    /app
+        /__init__.py
+        /models.py
+        /views.py
+        /forms.py 
+        /static
+            /style.css
+        /templates
+            layout.html
+            index.html
+            login.html
+            ...
